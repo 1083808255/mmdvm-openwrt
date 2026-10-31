@@ -17,7 +17,7 @@ jobs:
 
       - name: Download OpenWrt SDK
         run: |
-          wget https://downloads.openwrt.org/releases/24.10.5/targets/x86/64/openwrt-sdk-24.10.5-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.xz
+          wget https://downloads.openwrt.org/releases/24.10.5/targets/x86/64/openwrt-sdk-24.10.5-x86-64_gcc-14.3.0_musl.Linux-x86_64.tar.zst
           tar -xf openwrt-sdk-*.tar.xz
           mv openwrt-sdk-*/ sdk
           
