@@ -29,7 +29,6 @@ jobs:
           export TERM=xterm
           
           cp feeds.conf.default feeds.conf
-          # 把咱们的源码库作为 feed 加进去
           echo "src-git mmdvm file://$GITHUB_WORKSPACE/mmdvm-src" >> feeds.conf
           
           ./scripts/feeds update -a
@@ -47,9 +46,12 @@ jobs:
       - name: Collect IPK
         run: |
           DEST_DIR="ipk/ipk-x86/build"
+          
+          # 核心步骤：先清空 build 目录下的所有旧文件，防止新旧混杂！
+          rm -rf "$DEST_DIR"/*
+          
           mkdir -p "$DEST_DIR"
           
-          # 只抓取 dmrgateway 和它的依赖库
           cp sdk/bin/packages/x86_64/*/dmrgateway*.ipk "$DEST_DIR/" || true
           cp sdk/bin/packages/x86_64/*/nlohmannjson*.ipk "$DEST_DIR/" || true
           cp sdk/bin/packages/x86_64/*/libmosquitto*.ipk "$DEST_DIR/" || true
@@ -64,6 +66,6 @@ jobs:
       - name: Auto Commit to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Build: Fix and compile only DMRGateway"
+          commit_message: "Build: Clean and compile only DMRGateway"
           branch: master
           file_pattern: ipk/**/*
