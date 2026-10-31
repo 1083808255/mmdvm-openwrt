@@ -1,4 +1,4 @@
-name: Build MMDVM
+name: Build MT76X8 MMDVM (DMR)
 
 on:
   workflow_dispatch:
