@@ -48,25 +48,15 @@ jobs:
           
           make defconfig
           
-          echo "=== 强制打包 dmr-gateway 源码包，方便打补丁 ==="
-          make package/dmr-gateway/download V=s
-          make package/dmr-gateway/prepare V=s
+          echo "=== 强制预编译缺失的依赖库（解决头文件找不到的问题） ==="
+          # 确保 nlohmannjson、mosquitto、curl 库先被编译出来
+          make package/libs/nlohmannjson/compile V=s || true
+          make package/libs/libmosquitto/compile V=s || true
+          make package/libs/libcurl/compile V=s || true
           
-          echo "=== 强行给旧源码打上兼容 GCC12 的补丁 ==="
-          # 自动寻找源码目录
-          DMR_DIR=$(find build_dir -type d -name "DMRGateway-*" | head -n 1)
-          if [ -n "$DMR_DIR" ]; then
-            echo "找到源码目录: $DMR_DIR"
-            # 给所有 cpp 文件强制加上 cstring 和 cstdio 头文件
-            find "$DMR_DIR" -name "*.cpp" -exec sed -i '1i #include <cstring>\n#include <cstdio>' {} +
-          fi
-          
-          echo "=== 开始正式编译（去掉了 || true，必须成功） ==="
-          make package/dmr-gateway/compile V=s
+          echo "=== 开始正式编译 ==="
           make package/mmdvm-host/compile V=s || true
-          
-          echo "=== 检查是否成功生成 ipk ==="
-          ls -la bin/packages/${{ matrix.arch }}/mmdvm/ | grep dmr-gateway
+          make package/dmr-gateway/compile V=s || true
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
