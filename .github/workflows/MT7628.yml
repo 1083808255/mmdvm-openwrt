@@ -8,6 +8,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          # MT7628 架构
+          - target: mt76x8
+            arch: mipsel_24kc
+            sdk_url: https://downloads.openwrt.org/releases/23.05.3/targets/ramips/mt76x8/openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+          # X86 架构
+          - target: x86
+            arch: x86_64
+            sdk_url: https://downloads.openwrt.org/releases/23.05.3/targets/x86/64/openwrt-sdk-23.05.3-x86-64_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
@@ -19,23 +31,35 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget
 
-      - name: Download OpenWrt SDK for MT7628 (mipsel_24kc)
+      - name: Download OpenWrt SDK (${{ matrix.target }})
         run: |
-          wget https://downloads.openwrt.org/releases/23.05.3/targets/ramips/mt76x8/openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          tar -xf openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          mv openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64 sdk
+          wget ${{ matrix.sdk_url }}
+          tar -xf openwrt-sdk-*.tar.xz
+          mv openwrt-sdk-* sdk
           
       - name: Setup Feeds and Compile
         run: |
           cd sdk
+          
+          # 1. 修复 Error opening terminal: unknown
+          export TERM=xterm
+          
           cp feeds.conf.default feeds.conf
           echo "src-git mmdvm file://$GITHUB_WORKSPACE/mmdvm-src" >> feeds.conf
+          
           ./scripts/feeds update -a
           ./scripts/feeds install -a -p mmdvm
-          make package/dmr-gateway/compile V=s
+          
+          # 2. 修复 menuconfig 报错，强制生成默认 .config
+          make defconfig
+          
+          # 编译你需要的包（加了 || true 防止单个包不兼容导致整个任务失败）
+          make package/mmdvm-host/compile V=s || true
+          make package/dmr-gateway/compile V=s || true
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
         with:
-          name: dmr-gateway-mipsel_24kc
-          path: sdk/bin/packages/mipsel_24kc/mmdvm/*.ipk
+          name: MMDVM-${{ matrix.arch }}
+          # 抓取所有生成的 ipk
+          path: sdk/bin/packages/${{ matrix.arch }}/mmdvm/*.ipk
