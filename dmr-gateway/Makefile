@@ -18,7 +18,7 @@ define Package/dmrgateway
   CATEGORY:=Utilities
   TITLE:=Multi-network DMR Gateway for MMDVM
   URL:=https://github.com/g4klx/DMRGateway
-  DEPENDS:=+libstdcpp
+  DEPENDS:=+libstdcpp +libmosquitto
 endef
 
 define Package/dmrgateway/description
