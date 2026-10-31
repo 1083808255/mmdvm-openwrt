@@ -1,0 +1,931 @@
+Package: cJSON
+Version: 1.7.17-r1
+Architecture: x86
+Filename: cJSON_1.7.17-r1_x86_64.ipk
+Size: 11566
+Description: Auto generated package cJSON_1.7.17-r1_x86_64.ipk
+
+Package: ca-bundle
+Version: 20250419-r1
+Architecture: all
+Filename: ca-bundle_20250419-r1_all.ipk
+Size: 131153
+Description: Auto generated package ca-bundle_20250419-r1_all.ipk
+
+Package: ca-certificates
+Version: 20250419-r1
+Architecture: all
+Filename: ca-certificates_20250419-r1_all.ipk
+Size: 142364
+Description: Auto generated package ca-certificates_20250419-r1_all.ipk
+
+Package: cgi-io
+Version: 2022.08.10~901b0f04-r21
+Architecture: x86
+Filename: cgi-io_2022.08.10~901b0f04-r21_x86_64.ipk
+Size: 9628
+Description: Auto generated package cgi-io_2022.08.10~901b0f04-r21_x86_64.ipk
+
+Package: curl
+Version: 8.12.1-r1
+Architecture: x86
+Filename: curl_8.12.1-r1_x86_64.ipk
+Size: 68405
+Description: Auto generated package curl_8.12.1-r1_x86_64.ipk
+
+Package: dmrgateway
+Version: 0~master-r1
+Architecture: x86
+Filename: dmrgateway_0~master-r1_x86_64.ipk
+Size: 146643
+Description: Auto generated package dmrgateway_0~master-r1_x86_64.ipk
+
+Package: ircddb-gateway
+Version: 1.3.1-r1
+Architecture: x86
+Filename: ircddb-gateway_1.3.1-r1_x86_64.ipk
+Size: 980585
+Description: Auto generated package ircddb-gateway_1.3.1-r1_x86_64.ipk
+
+Package: iwinfo
+Version: 2024.10.20~b94f066e-r1
+Architecture: x86
+Filename: iwinfo_2024.10.20~b94f066e-r1_x86_64.ipk
+Size: 7637
+Description: Auto generated package iwinfo_2024.10.20~b94f066e-r1_x86_64.ipk
+
+Package: jshn
+Version: 2025.07.23~49056d17-r1
+Architecture: x86
+Filename: jshn_2025.07.23~49056d17-r1_x86_64.ipk
+Size: 7193
+Description: Auto generated package jshn_2025.07.23~49056d17-r1_x86_64.ipk
+
+Package: libblobmsg-json20240329
+Version: 2025.07.23~49056d17-r1
+Architecture: x86
+Filename: libblobmsg-json20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Size: 4484
+Description: Auto generated package libblobmsg-json20240329_2025.07.23~49056d17-r1_x86_64.ipk
+
+Package: libcap-bin
+Version: 2.69-r1
+Architecture: x86
+Filename: libcap-bin_2.69-r1_x86_64.ipk
+Size: 21007
+Description: Auto generated package libcap-bin_2.69-r1_x86_64.ipk
+
+Package: libcap
+Version: 2.69-r1
+Architecture: x86
+Filename: libcap_2.69-r1_x86_64.ipk
+Size: 15886
+Description: Auto generated package libcap_2.69-r1_x86_64.ipk
+
+Package: libcares
+Version: 1.34.6-r1
+Architecture: x86
+Filename: libcares_1.34.6-r1_x86_64.ipk
+Size: 93147
+Description: Auto generated package libcares_1.34.6-r1_x86_64.ipk
+
+Package: libcurl4
+Version: 8.12.1-r1
+Architecture: x86
+Filename: libcurl4_8.12.1-r1_x86_64.ipk
+Size: 238875
+Description: Auto generated package libcurl4_8.12.1-r1_x86_64.ipk
+
+Package: libexpat
+Version: 2.7.1-r1
+Architecture: x86
+Filename: libexpat_2.7.1-r1_x86_64.ipk
+Size: 52267
+Description: Auto generated package libexpat_2.7.1-r1_x86_64.ipk
+
+Package: libiwinfo-data
+Version: 2024.10.20~b94f066e-r1
+Architecture: x86
+Filename: libiwinfo-data_2024.10.20~b94f066e-r1_x86_64.ipk
+Size: 3942
+Description: Auto generated package libiwinfo-data_2024.10.20~b94f066e-r1_x86_64.ipk
+
+Package: libiwinfo-lua
+Version: 2024.10.20~b94f066e-r1
+Architecture: x86
+Filename: libiwinfo-lua_2024.10.20~b94f066e-r1_x86_64.ipk
+Size: 7332
+Description: Auto generated package libiwinfo-lua_2024.10.20~b94f066e-r1_x86_64.ipk
+
+Package: libiwinfo20230701
+Version: 2024.10.20~b94f066e-r1
+Architecture: x86
+Filename: libiwinfo20230701_2024.10.20~b94f066e-r1_x86_64.ipk
+Size: 27117
+Description: Auto generated package libiwinfo20230701_2024.10.20~b94f066e-r1_x86_64.ipk
+
+Package: libjson-c5
+Version: 0.18-r1
+Architecture: x86
+Filename: libjson-c5_0.18-r1_x86_64.ipk
+Size: 30402
+Description: Auto generated package libjson-c5_0.18-r1_x86_64.ipk
+
+Package: libjson-script20240329
+Version: 2025.07.23~49056d17-r1
+Architecture: x86
+Filename: libjson-script20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Size: 5964
+Description: Auto generated package libjson-script20240329_2025.07.23~49056d17-r1_x86_64.ipk
+
+Package: liblua5.1.5
+Version: 5.1.5-r11
+Architecture: x86
+Filename: liblua5.1.5_5.1.5-r11_x86_64.ipk
+Size: 74330
+Description: Auto generated package liblua5.1.5_5.1.5-r11_x86_64.ipk
+
+Package: liblucihttp-lua
+Version: 2023.03.15~9b5b683f-r1
+Architecture: x86
+Filename: liblucihttp-lua_2023.03.15~9b5b683f-r1_x86_64.ipk
+Size: 4356
+Description: Auto generated package liblucihttp-lua_2023.03.15~9b5b683f-r1_x86_64.ipk
+
+Package: liblucihttp-ucode
+Version: 2023.03.15~9b5b683f-r1
+Architecture: x86
+Filename: liblucihttp-ucode_2023.03.15~9b5b683f-r1_x86_64.ipk
+Size: 4826
+Description: Auto generated package liblucihttp-ucode_2023.03.15~9b5b683f-r1_x86_64.ipk
+
+Package: liblucihttp0
+Version: 2023.03.15~9b5b683f-r1
+Architecture: x86
+Filename: liblucihttp0_2023.03.15~9b5b683f-r1_x86_64.ipk
+Size: 8613
+Description: Auto generated package liblucihttp0_2023.03.15~9b5b683f-r1_x86_64.ipk
+
+Package: libmbedtls21
+Version: 3.6.5-r1
+Architecture: x86
+Filename: libmbedtls21_3.6.5-r1_x86_64.ipk
+Size: 311816
+Description: Auto generated package libmbedtls21_3.6.5-r1_x86_64.ipk
+
+Package: libmmdvm
+Version: 1.2.0-r1
+Architecture: x86
+Filename: libmmdvm_1.2.0-r1_x86_64.ipk
+Size: 10889
+Description: Auto generated package libmmdvm_1.2.0-r1_x86_64.ipk
+
+Package: libmosquitto-nossl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: libmosquitto-nossl_2.0.18-r3_x86_64.ipk
+Size: 70767
+Description: Auto generated package libmosquitto-nossl_2.0.18-r3_x86_64.ipk
+
+Package: libmosquitto-ssl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: libmosquitto-ssl_2.0.18-r3_x86_64.ipk
+Size: 83777
+Description: Auto generated package libmosquitto-ssl_2.0.18-r3_x86_64.ipk
+
+Package: libmosquittopp
+Version: 2.0.18-r3
+Architecture: x86
+Filename: libmosquittopp_2.0.18-r3_x86_64.ipk
+Size: 5856
+Description: Auto generated package libmosquittopp_2.0.18-r3_x86_64.ipk
+
+Package: libnghttp2-14
+Version: 1.63.0-r1
+Architecture: x86
+Filename: libnghttp2-14_1.63.0-r1_x86_64.ipk
+Size: 70565
+Description: Auto generated package libnghttp2-14_1.63.0-r1_x86_64.ipk
+
+Package: libnl-tiny1
+Version: 2025.03.19~c0df580a-r1
+Architecture: x86
+Filename: libnl-tiny1_2025.03.19~c0df580a-r1_x86_64.ipk
+Size: 16261
+Description: Auto generated package libnl-tiny1_2025.03.19~c0df580a-r1_x86_64.ipk
+
+Package: libopenssl-afalg
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl-afalg_3.0.18-r1_x86_64.ipk
+Size: 7989
+Description: Auto generated package libopenssl-afalg_3.0.18-r1_x86_64.ipk
+
+Package: libopenssl-conf
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl-conf_3.0.18-r1_x86_64.ipk
+Size: 6494
+Description: Auto generated package libopenssl-conf_3.0.18-r1_x86_64.ipk
+
+Package: libopenssl-devcrypto
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl-devcrypto_3.0.18-r1_x86_64.ipk
+Size: 12490
+Description: Auto generated package libopenssl-devcrypto_3.0.18-r1_x86_64.ipk
+
+Package: libopenssl-legacy
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl-legacy_3.0.18-r1_x86_64.ipk
+Size: 38532
+Description: Auto generated package libopenssl-legacy_3.0.18-r1_x86_64.ipk
+
+Package: libopenssl-padlock
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl-padlock_3.0.18-r1_x86_64.ipk
+Size: 11347
+Description: Auto generated package libopenssl-padlock_3.0.18-r1_x86_64.ipk
+
+Package: libopenssl3
+Version: 3.0.18-r1
+Architecture: x86
+Filename: libopenssl3_3.0.18-r1_x86_64.ipk
+Size: 2098906
+Description: Auto generated package libopenssl3_3.0.18-r1_x86_64.ipk
+
+Package: libubox-lua
+Version: 2025.07.23~49056d17-r1
+Architecture: x86
+Filename: libubox-lua_2025.07.23~49056d17-r1_x86_64.ipk
+Size: 6384
+Description: Auto generated package libubox-lua_2025.07.23~49056d17-r1_x86_64.ipk
+
+Package: libubox20240329
+Version: 2025.07.23~49056d17-r1
+Architecture: x86
+Filename: libubox20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Size: 29057
+Description: Auto generated package libubox20240329_2025.07.23~49056d17-r1_x86_64.ipk
+
+Package: libubus-lua
+Version: 2025.10.17~60e04048-r1
+Architecture: x86
+Filename: libubus-lua_2025.10.17~60e04048-r1_x86_64.ipk
+Size: 7879
+Description: Auto generated package libubus-lua_2025.10.17~60e04048-r1_x86_64.ipk
+
+Package: libubus20250102
+Version: 2025.10.17~60e04048-r1
+Architecture: x86
+Filename: libubus20250102_2025.10.17~60e04048-r1_x86_64.ipk
+Size: 12415
+Description: Auto generated package libubus20250102_2025.10.17~60e04048-r1_x86_64.ipk
+
+Package: libuci-lua
+Version: 2025.01.20~16ff0bad-r1
+Architecture: x86
+Filename: libuci-lua_2025.01.20~16ff0bad-r1_x86_64.ipk
+Size: 7807
+Description: Auto generated package libuci-lua_2025.01.20~16ff0bad-r1_x86_64.ipk
+
+Package: libuci20250120
+Version: 2025.01.20~16ff0bad-r1
+Architecture: x86
+Filename: libuci20250120_2025.01.20~16ff0bad-r1_x86_64.ipk
+Size: 18292
+Description: Auto generated package libuci20250120_2025.01.20~16ff0bad-r1_x86_64.ipk
+
+Package: libucode20230711
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: libucode20230711_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 77983
+Description: Auto generated package libucode20230711_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: libuv1
+Version: 1.48.0-r1
+Architecture: x86
+Filename: libuv1_1.48.0-r1_x86_64.ipk
+Size: 69329
+Description: Auto generated package libuv1_1.48.0-r1_x86_64.ipk
+
+Package: libwebsockets-full
+Version: 4.3.3-r1
+Architecture: x86
+Filename: libwebsockets-full_4.3.3-r1_x86_64.ipk
+Size: 190782
+Description: Auto generated package libwebsockets-full_4.3.3-r1_x86_64.ipk
+
+Package: libwebsockets-mbedtls
+Version: 4.3.3-r1
+Architecture: x86
+Filename: libwebsockets-mbedtls_4.3.3-r1_x86_64.ipk
+Size: 169774
+Description: Auto generated package libwebsockets-mbedtls_4.3.3-r1_x86_64.ipk
+
+Package: libwebsockets-openssl
+Version: 4.3.3-r1
+Architecture: x86
+Filename: libwebsockets-openssl_4.3.3-r1_x86_64.ipk
+Size: 167410
+Description: Auto generated package libwebsockets-openssl_4.3.3-r1_x86_64.ipk
+
+Package: libwxwidgets
+Version: 3.0-r6
+Architecture: x86
+Filename: libwxwidgets_3.0-r6_x86_64.ipk
+Size: 614674
+Description: Auto generated package libwxwidgets_3.0-r6_x86_64.ipk
+
+Package: lua-examples
+Version: 5.1.5-r11
+Architecture: x86
+Filename: lua-examples_5.1.5-r11_x86_64.ipk
+Size: 6193
+Description: Auto generated package lua-examples_5.1.5-r11_x86_64.ipk
+
+Package: lua
+Version: 5.1.5-r11
+Architecture: x86
+Filename: lua_5.1.5-r11_x86_64.ipk
+Size: 5412
+Description: Auto generated package lua_5.1.5-r11_x86_64.ipk
+
+Package: luac
+Version: 5.1.5-r11
+Architecture: x86
+Filename: luac_5.1.5-r11_x86_64.ipk
+Size: 6062
+Description: Auto generated package luac_5.1.5-r11_x86_64.ipk
+
+Package: luci-base
+Version: 25.340.26705~d88390b
+Architecture: x86
+Filename: luci-base_25.340.26705~d88390b_x86_64.ipk
+Size: 149714
+Description: Auto generated package luci-base_25.340.26705~d88390b_x86_64.ipk
+
+Package: luci-compat
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-compat_25.340.26705~d88390b_all.ipk
+Size: 46460
+Description: Auto generated package luci-compat_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ar
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ar_25.340.26705~d88390b_all.ipk
+Size: 59744
+Description: Auto generated package luci-i18n-base-ar_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-bg
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-bg_25.340.26705~d88390b_all.ipk
+Size: 10169
+Description: Auto generated package luci-i18n-base-bg_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-bn
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-bn_25.340.26705~d88390b_all.ipk
+Size: 2688
+Description: Auto generated package luci-i18n-base-bn_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ca
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ca_25.340.26705~d88390b_all.ipk
+Size: 19470
+Description: Auto generated package luci-i18n-base-ca_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-cs
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-cs_25.340.26705~d88390b_all.ipk
+Size: 65521
+Description: Auto generated package luci-i18n-base-cs_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-da
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-da_25.340.26705~d88390b_all.ipk
+Size: 47346
+Description: Auto generated package luci-i18n-base-da_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-de
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-de_25.340.26705~d88390b_all.ipk
+Size: 62162
+Description: Auto generated package luci-i18n-base-de_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-el
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-el_25.340.26705~d88390b_all.ipk
+Size: 16532
+Description: Auto generated package luci-i18n-base-el_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-es
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-es_25.340.26705~d88390b_all.ipk
+Size: 62909
+Description: Auto generated package luci-i18n-base-es_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-fa
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-fa_25.340.26705~d88390b_all.ipk
+Size: 6021
+Description: Auto generated package luci-i18n-base-fa_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-fi
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-fi_25.340.26705~d88390b_all.ipk
+Size: 35575
+Description: Auto generated package luci-i18n-base-fi_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-fil
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-fil_25.340.26705~d88390b_all.ipk
+Size: 6481
+Description: Auto generated package luci-i18n-base-fil_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-fr
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-fr_25.340.26705~d88390b_all.ipk
+Size: 49763
+Description: Auto generated package luci-i18n-base-fr_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ga
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ga_25.340.26705~d88390b_all.ipk
+Size: 64711
+Description: Auto generated package luci-i18n-base-ga_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-he
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-he_25.340.26705~d88390b_all.ipk
+Size: 6212
+Description: Auto generated package luci-i18n-base-he_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-hi
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-hi_25.340.26705~d88390b_all.ipk
+Size: 3185
+Description: Auto generated package luci-i18n-base-hi_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-hu
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-hu_25.340.26705~d88390b_all.ipk
+Size: 59822
+Description: Auto generated package luci-i18n-base-hu_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-it
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-it_25.340.26705~d88390b_all.ipk
+Size: 54193
+Description: Auto generated package luci-i18n-base-it_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ja
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ja_25.340.26705~d88390b_all.ipk
+Size: 38727
+Description: Auto generated package luci-i18n-base-ja_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ko
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ko_25.340.26705~d88390b_all.ipk
+Size: 19410
+Description: Auto generated package luci-i18n-base-ko_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-lt
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-lt_25.340.26705~d88390b_all.ipk
+Size: 68777
+Description: Auto generated package luci-i18n-base-lt_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-mr
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-mr_25.340.26705~d88390b_all.ipk
+Size: 2212
+Description: Auto generated package luci-i18n-base-mr_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ms
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ms_25.340.26705~d88390b_all.ipk
+Size: 6683
+Description: Auto generated package luci-i18n-base-ms_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-nl
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-nl_25.340.26705~d88390b_all.ipk
+Size: 47100
+Description: Auto generated package luci-i18n-base-nl_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-no
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-no_25.340.26705~d88390b_all.ipk
+Size: 16986
+Description: Auto generated package luci-i18n-base-no_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-pl
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-pl_25.340.26705~d88390b_all.ipk
+Size: 64153
+Description: Auto generated package luci-i18n-base-pl_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-pt-br
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-pt-br_25.340.26705~d88390b_all.ipk
+Size: 63632
+Description: Auto generated package luci-i18n-base-pt-br_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-pt
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-pt_25.340.26705~d88390b_all.ipk
+Size: 63048
+Description: Auto generated package luci-i18n-base-pt_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ro
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ro_25.340.26705~d88390b_all.ipk
+Size: 58709
+Description: Auto generated package luci-i18n-base-ro_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-ru
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-ru_25.340.26705~d88390b_all.ipk
+Size: 76447
+Description: Auto generated package luci-i18n-base-ru_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-sk
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-sk_25.340.26705~d88390b_all.ipk
+Size: 24361
+Description: Auto generated package luci-i18n-base-sk_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-sv
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-sv_25.340.26705~d88390b_all.ipk
+Size: 18410
+Description: Auto generated package luci-i18n-base-sv_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-tr
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-tr_25.340.26705~d88390b_all.ipk
+Size: 55322
+Description: Auto generated package luci-i18n-base-tr_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-uk
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-uk_25.340.26705~d88390b_all.ipk
+Size: 74069
+Description: Auto generated package luci-i18n-base-uk_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-vi
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-vi_25.340.26705~d88390b_all.ipk
+Size: 55506
+Description: Auto generated package luci-i18n-base-vi_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-yua
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-yua_25.340.26705~d88390b_all.ipk
+Size: 56405
+Description: Auto generated package luci-i18n-base-yua_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-zh-cn
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-zh-cn_25.340.26705~d88390b_all.ipk
+Size: 59556
+Description: Auto generated package luci-i18n-base-zh-cn_25.340.26705~d88390b_all.ipk
+
+Package: luci-i18n-base-zh-tw
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-i18n-base-zh-tw_25.340.26705~d88390b_all.ipk
+Size: 56007
+Description: Auto generated package luci-i18n-base-zh-tw_25.340.26705~d88390b_all.ipk
+
+Package: luci-lib-base
+Version: 25.340.26705~d88390b
+Architecture: all
+Filename: luci-lib-base_25.340.26705~d88390b_all.ipk
+Size: 10537
+Description: Auto generated package luci-lib-base_25.340.26705~d88390b_all.ipk
+
+Package: luci-lib-ip
+Version: 25.340.26705~d88390b
+Architecture: x86
+Filename: luci-lib-ip_25.340.26705~d88390b_x86_64.ipk
+Size: 12663
+Description: Auto generated package luci-lib-ip_25.340.26705~d88390b_x86_64.ipk
+
+Package: luci-lib-jsonc
+Version: 25.340.26705~d88390b
+Architecture: x86
+Filename: luci-lib-jsonc_25.340.26705~d88390b_x86_64.ipk
+Size: 5166
+Description: Auto generated package luci-lib-jsonc_25.340.26705~d88390b_x86_64.ipk
+
+Package: luci-lib-nixio
+Version: 25.340.26705~d88390b
+Architecture: x86
+Filename: luci-lib-nixio_25.340.26705~d88390b_x86_64.ipk
+Size: 34186
+Description: Auto generated package luci-lib-nixio_25.340.26705~d88390b_x86_64.ipk
+
+Package: luci-lua-runtime
+Version: 25.340.26705~d88390b
+Architecture: x86
+Filename: luci-lua-runtime_25.340.26705~d88390b_x86_64.ipk
+Size: 30638
+Description: Auto generated package luci-lua-runtime_25.340.26705~d88390b_x86_64.ipk
+
+Package: mbedtls-util
+Version: 3.6.5-r1
+Architecture: x86
+Filename: mbedtls-util_3.6.5-r1_x86_64.ipk
+Size: 9027
+Description: Auto generated package mbedtls-util_3.6.5-r1_x86_64.ipk
+
+Package: mosquitto-client-nossl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: mosquitto-client-nossl_2.0.18-r3_x86_64.ipk
+Size: 52285
+Description: Auto generated package mosquitto-client-nossl_2.0.18-r3_x86_64.ipk
+
+Package: mosquitto-client-ssl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: mosquitto-client-ssl_2.0.18-r3_x86_64.ipk
+Size: 76953
+Description: Auto generated package mosquitto-client-ssl_2.0.18-r3_x86_64.ipk
+
+Package: mosquitto-nossl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: mosquitto-nossl_2.0.18-r3_x86_64.ipk
+Size: 114205
+Description: Auto generated package mosquitto-nossl_2.0.18-r3_x86_64.ipk
+
+Package: mosquitto-ssl
+Version: 2.0.18-r3
+Architecture: x86
+Filename: mosquitto-ssl_2.0.18-r3_x86_64.ipk
+Size: 308491
+Description: Auto generated package mosquitto-ssl_2.0.18-r3_x86_64.ipk
+
+Package: nxdn-clients
+Version: 1.3.0-r1
+Architecture: x86
+Filename: nxdn-clients_1.3.0-r1_x86_64.ipk
+Size: 174606
+Description: Auto generated package nxdn-clients_1.3.0-r1_x86_64.ipk
+
+Package: openssl-util
+Version: 3.0.18-r1
+Architecture: x86
+Filename: openssl-util_3.0.18-r1_x86_64.ipk
+Size: 343453
+Description: Auto generated package openssl-util_3.0.18-r1_x86_64.ipk
+
+Package: p25-clients
+Version: 1.3.0-r2
+Architecture: x86
+Filename: p25-clients_1.3.0-r2_x86_64.ipk
+Size: 206509
+Description: Auto generated package p25-clients_1.3.0-r2_x86_64.ipk
+
+Package: rpcd-mod-file
+Version: 2025.09.01~bba95191-r1
+Architecture: x86
+Filename: rpcd-mod-file_2025.09.01~bba95191-r1_x86_64.ipk
+Size: 7923
+Description: Auto generated package rpcd-mod-file_2025.09.01~bba95191-r1_x86_64.ipk
+
+Package: rpcd-mod-iwinfo
+Version: 2025.09.01~bba95191-r1
+Architecture: x86
+Filename: rpcd-mod-iwinfo_2025.09.01~bba95191-r1_x86_64.ipk
+Size: 8296
+Description: Auto generated package rpcd-mod-iwinfo_2025.09.01~bba95191-r1_x86_64.ipk
+
+Package: rpcd-mod-luci
+Version: 20240305-r1
+Architecture: x86
+Filename: rpcd-mod-luci_20240305-r1_x86_64.ipk
+Size: 14543
+Description: Auto generated package rpcd-mod-luci_20240305-r1_x86_64.ipk
+
+Package: rpcd-mod-rpcsys
+Version: 2025.09.01~bba95191-r1
+Architecture: x86
+Filename: rpcd-mod-rpcsys_2025.09.01~bba95191-r1_x86_64.ipk
+Size: 4687
+Description: Auto generated package rpcd-mod-rpcsys_2025.09.01~bba95191-r1_x86_64.ipk
+
+Package: rpcd-mod-ucode
+Version: 2025.09.01~bba95191-r1
+Architecture: x86
+Filename: rpcd-mod-ucode_2025.09.01~bba95191-r1_x86_64.ipk
+Size: 8493
+Description: Auto generated package rpcd-mod-ucode_2025.09.01~bba95191-r1_x86_64.ipk
+
+Package: rpcd
+Version: 2025.09.01~bba95191-r1
+Architecture: x86
+Filename: rpcd_2025.09.01~bba95191-r1_x86_64.ipk
+Size: 25982
+Description: Auto generated package rpcd_2025.09.01~bba95191-r1_x86_64.ipk
+
+Package: ubus
+Version: 2025.10.17~60e04048-r1
+Architecture: x86
+Filename: ubus_2025.10.17~60e04048-r1_x86_64.ipk
+Size: 6958
+Description: Auto generated package ubus_2025.10.17~60e04048-r1_x86_64.ipk
+
+Package: ubusd
+Version: 2025.10.17~60e04048-r1
+Architecture: x86
+Filename: ubusd_2025.10.17~60e04048-r1_x86_64.ipk
+Size: 13769
+Description: Auto generated package ubusd_2025.10.17~60e04048-r1_x86_64.ipk
+
+Package: uci
+Version: 2025.01.20~16ff0bad-r1
+Architecture: x86
+Filename: uci_2025.01.20~16ff0bad-r1_x86_64.ipk
+Size: 7871
+Description: Auto generated package uci_2025.01.20~16ff0bad-r1_x86_64.ipk
+
+Package: ucode-mod-debug
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-debug_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 9027
+Description: Auto generated package ucode-mod-debug_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-digest
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-digest_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 18915
+Description: Auto generated package ucode-mod-digest_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-fs
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-fs_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 12504
+Description: Auto generated package ucode-mod-fs_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-html
+Version: 1
+Architecture: x86
+Filename: ucode-mod-html_1_x86_64.ipk
+Size: 30278
+Description: Auto generated package ucode-mod-html_1_x86_64.ipk
+
+Package: ucode-mod-log
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-log_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 5178
+Description: Auto generated package ucode-mod-log_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-lua
+Version: 1
+Architecture: x86
+Filename: ucode-mod-lua_1_x86_64.ipk
+Size: 9518
+Description: Auto generated package ucode-mod-lua_1_x86_64.ipk
+
+Package: ucode-mod-math
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-math_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 3453
+Description: Auto generated package ucode-mod-math_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-nl80211
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-nl80211_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 23550
+Description: Auto generated package ucode-mod-nl80211_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-resolv
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-resolv_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 8492
+Description: Auto generated package ucode-mod-resolv_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-rtnl
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-rtnl_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 29406
+Description: Auto generated package ucode-mod-rtnl_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-socket
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-socket_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 25772
+Description: Auto generated package ucode-mod-socket_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-struct
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-struct_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 13104
+Description: Auto generated package ucode-mod-struct_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-ubus
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-ubus_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 18241
+Description: Auto generated package ucode-mod-ubus_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-uci
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-uci_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 8922
+Description: Auto generated package ucode-mod-uci_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode-mod-uloop
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode-mod-uloop_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 10050
+Description: Auto generated package ucode-mod-uloop_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ucode
+Version: 2025.07.18~3f64c808-r1
+Architecture: x86
+Filename: ucode_2025.07.18~3f64c808-r1_x86_64.ipk
+Size: 7263
+Description: Auto generated package ucode_2025.07.18~3f64c808-r1_x86_64.ipk
+
+Package: ysf-clients
+Version: 1.3.0-r1
+Architecture: x86
+Filename: ysf-clients_1.3.0-r1_x86_64.ipk
+Size: 142254
+Description: Auto generated package ysf-clients_1.3.0-r1_x86_64.ipk
+
+Package: zlib-dev
+Version: 1.3.1-r1
+Architecture: x86
+Filename: zlib-dev_1.3.1-r1_x86_64.ipk
+Size: 80528
+Description: Auto generated package zlib-dev_1.3.1-r1_x86_64.ipk
+
+Package: zlib
+Version: 1.3.1-r1
+Architecture: x86
+Filename: zlib_1.3.1-r1_x86_64.ipk
+Size: 44055
+Description: Auto generated package zlib_1.3.1-r1_x86_64.ipk
+
