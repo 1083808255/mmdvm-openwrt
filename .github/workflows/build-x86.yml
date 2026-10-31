@@ -18,7 +18,11 @@ jobs:
       - name: Download OpenWrt SDK
         run: |
           wget https://downloads.openwrt.org/releases/24.10.5/targets/x86/64/openwrt-sdk-24.10.5-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
-          tar -xf openwrt-sdk-*.tar.xz
+          
+          sudo apt-get install -y zstd
+          
+          tar --use-compress-program=unzstd -xf openwrt-sdk-*.tar.zst
+          
           mv openwrt-sdk-*/ sdk
           
       - name: Setup Feeds and Compile (Full Features)
@@ -27,7 +31,6 @@ jobs:
           export TERM=xterm
           
           cp feeds.conf.default feeds.conf
-          # 注意：因为上面去掉了 path: mmdvm-src，这里的路径变成了 $GITHUB_WORKSPACE
           echo "src-git mmdvm file://$GITHUB_WORKSPACE" >> feeds.conf
           
           ./scripts/feeds update -a
@@ -51,14 +54,11 @@ jobs:
           
       - name: Collect and Upload IPKs
         run: |
-          # 固定为 x86 的路径
           DEST_DIR="ipk/ipk-x86/build"
           mkdir -p "$DEST_DIR"
           
-          # 把 SDK 编译出来的所有 ipk 包，全复制到这个目录
           cp sdk/bin/packages/x86_64/*/*.ipk "$DEST_DIR/" || true
           
-          # === 新增：生成 OpenWrt 在线源所需的索引文件 ===
           echo "=== 生成 Packages 索引文件 ==="
           cd "$DEST_DIR"
           for f in *.ipk; do
@@ -73,7 +73,6 @@ jobs:
             fi
           done > Packages
           
-          # 压缩成 gz 格式
           gzip -c Packages > Packages.gz
 
       - name: Upload Artifact (for download)
