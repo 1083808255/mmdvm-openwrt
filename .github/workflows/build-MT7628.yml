@@ -40,13 +40,28 @@ jobs:
           make package/libs/libmosquitto/compile V=s || true
           make package/libs/libcurl/compile V=s || true
           
-          echo "=== 仅编译纯 DMR 核心包 ==="
+          echo "=== 编译纯 DMR 核心包及界面 ==="
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
           make package/mmdvm-luci/compile V=s || true
 
-      - name: Upload ipk
+      - name: Collect and Upload IPKs
+        run: |
+          DEST_DIR="ipk/ipk-mt7628/build"
+          mkdir -p "$DEST_DIR"
+          
+          # 核心修改：从所有子目录中抓取 .ipk，不再局限于 mmdvm 目录
+          cp sdk/bin/packages/mipsel_24kc/*/*.ipk "$DEST_DIR/" || true
+
+      - name: Upload Artifact (for download)
         uses: actions/upload-artifact@v4
         with:
           name: MMDVM-MT7628-DMR-Only
-          path: sdk/bin/packages/mipsel_24kc/mmdvm/*.ipk
+          path: sdk/bin/packages/mipsel_24kc/*/*.ipk
+
+      - name: Auto Commit to Repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-build: Update MT7628 IPKs"
+          branch: master
+          file_pattern: ipk/**/*
