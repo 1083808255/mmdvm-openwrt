@@ -40,11 +40,11 @@ jobs:
 
       - name: Collect IPK
         run: |
-          DEST_DIR="ipk/ipk-x86/build"
+          # 注意：代码在 mmdvm-src 里，所以目标路径也要带上前缀
+          DEST_DIR="mmdvm-src/ipk/ipk-x86/build"
           
-          # 核心步骤：先清空 build 目录下的所有旧文件，防止新旧混杂！
+          # 先清空 build 目录下的所有旧文件，防止新旧混杂
           rm -rf "$DEST_DIR"/*
-          
           mkdir -p "$DEST_DIR"
           
           cp sdk/bin/packages/x86_64/*/dmrgateway*.ipk "$DEST_DIR/" || true
@@ -61,6 +61,8 @@ jobs:
       - name: Auto Commit to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          # 告诉它去 mmdvm-src 目录里执行 git 提交
+          repository: mmdvm-src
           commit_message: "Build: Clean and compile only DMRGateway"
           branch: master
           file_pattern: ipk/**/*
