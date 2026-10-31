@@ -1,4 +1,4 @@
-name: Build X86 (Full Features)
+name: Build X86 MMDVM(Full Features)
 
 on:
   workflow_dispatch:
