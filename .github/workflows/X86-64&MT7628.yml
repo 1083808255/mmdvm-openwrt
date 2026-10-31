@@ -1,4 +1,4 @@
-name: Build dmr-gateway
+name: Build MMDVM
 
 on:
   workflow_dispatch:
