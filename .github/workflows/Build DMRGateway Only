@@ -1,0 +1,69 @@
+name: Build DMRGateway Only (24.10.5)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          path: mmdvm-src
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget zstd
+
+      - name: Download OpenWrt SDK 24.10.5
+        run: |
+          wget https://downloads.openwrt.org/releases/24.10.5/targets/x86/64/openwrt-sdk-24.10.5-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+          tar --use-compress-program=unzstd -xf openwrt-sdk-*.tar.zst
+          mv openwrt-sdk-*/ sdk
+          
+      - name: Setup Feeds and Compile DMRGateway
+        run: |
+          cd sdk
+          export TERM=xterm
+          
+          cp feeds.conf.default feeds.conf
+          # 把咱们的源码库作为 feed 加进去
+          echo "src-git mmdvm file://$GITHUB_WORKSPACE/mmdvm-src" >> feeds.conf
+          
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a -p mmdvm
+          make defconfig
+          
+          echo "=== 强制预编译缺失的依赖库 ==="
+          make package/libs/nlohmannjson/compile V=s
+          make package/libs/libmosquitto/compile V=s
+          make package/libs/libcurl/compile V=s
+          
+          echo "=== 只编译 dmr-gateway (无 || true，报错必停) ==="
+          make package/dmr-gateway/compile V=s
+
+      - name: Collect IPK
+        run: |
+          DEST_DIR="ipk/ipk-x86/build"
+          mkdir -p "$DEST_DIR"
+          
+          # 只抓取 dmrgateway 和它的依赖库
+          cp sdk/bin/packages/x86_64/*/dmrgateway*.ipk "$DEST_DIR/" || true
+          cp sdk/bin/packages/x86_64/*/nlohmannjson*.ipk "$DEST_DIR/" || true
+          cp sdk/bin/packages/x86_64/*/libmosquitto*.ipk "$DEST_DIR/" || true
+          cp sdk/bin/packages/x86_64/*/libcurl*.ipk "$DEST_DIR/" || true
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DMRGateway-Only
+          path: sdk/bin/packages/x86_64/*/dmrgateway*.ipk
+
+      - name: Auto Commit to Repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Build: Fix and compile only DMRGateway"
+          branch: master
+          file_pattern: ipk/**/*
