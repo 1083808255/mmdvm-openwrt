@@ -35,11 +35,6 @@ jobs:
           ./scripts/feeds install -a -p mmdvm
           make defconfig
           
-          echo "=== 强制预编译缺失的依赖库 ==="
-          make package/libs/nlohmannjson/compile V=s || true
-          make package/libs/libmosquitto/compile V=s || true
-          make package/libs/libcurl/compile V=s || true
-          
           echo "=== 编译纯 DMR 核心包 ==="
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
@@ -48,7 +43,7 @@ jobs:
         run: |
           DEST_DIR="ipk/ipk-mt7628/build"
           
-          # 核心：先清空旧文件
+          # 先清空旧文件
           rm -rf "$DEST_DIR"/*
           mkdir -p "$DEST_DIR"
           
