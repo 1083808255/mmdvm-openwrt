@@ -13,16 +13,12 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget
+          sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget zstd
 
       - name: Download OpenWrt SDK
         run: |
           wget https://downloads.openwrt.org/releases/24.10.5/targets/x86/64/openwrt-sdk-24.10.5-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
-          
-          sudo apt-get install -y zstd
-          
           tar --use-compress-program=unzstd -xf openwrt-sdk-*.tar.zst
-          
           mv openwrt-sdk-*/ sdk
           
       - name: Setup Feeds and Compile (Full Features)
@@ -41,8 +37,10 @@ jobs:
           make package/libs/nlohmannjson/compile V=s || true
           make package/libs/libmosquitto/compile V=s || true
           make package/libs/libcurl/compile V=s || true
+          make package/libs/lua/compile V=s || true
+          make package/libs/ucode/compile V=s || true
           
-          echo "=== 编译全功能 MMDVM 套件 ==="
+          echo "=== 编译全功能 MMDVM 套件及网页 ==="
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
           make package/p25-clients/compile V=s || true
@@ -55,35 +53,38 @@ jobs:
       - name: Collect and Upload IPKs
         run: |
           DEST_DIR="ipk/ipk-x86/build"
+          
+          # 核心：先清空旧文件
+          rm -rf "$DEST_DIR"/*
           mkdir -p "$DEST_DIR"
           
           cp sdk/bin/packages/x86_64/*/*.ipk "$DEST_DIR/" || true
           
-          echo "=== 生成 Packages 索引文件 ==="
+          echo "=== 生成带正确 Architecture 的 Packages 索引文件 ==="
           cd "$DEST_DIR"
+          echo "Architecture: x86_64" > Packages
           for f in *.ipk; do
             if [ -f "$f" ]; then
               echo "Package: ${f%%_*}"
               echo "Version: $(echo $f | cut -d_ -f2)"
-              echo "Architecture: $(echo $f | cut -d_ -f3 | cut -d. -f1)"
+              echo "Architecture: x86_64"
               echo "Filename: $f"
               echo "Size: $(stat -c %s $f)"
               echo "Description: Auto generated package $f"
               echo ""
             fi
-          done > Packages
-          
+          done >> Packages
           gzip -c Packages > Packages.gz
 
       - name: Upload Artifact (for download)
         uses: actions/upload-artifact@v4
         with:
-          name: MMDVM-x86_64
+          name: MMDVM-x86_64-24.10.5
           path: sdk/bin/packages/x86_64/*/*.ipk
 
       - name: Auto Commit to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-build: Update X86 IPKs and Packages index"
+          commit_message: "Auto-build: Clean and Update X86 IPKs"
           branch: master
           file_pattern: ipk/**/*
