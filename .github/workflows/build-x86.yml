@@ -57,6 +57,24 @@ jobs:
           
           # 把 SDK 编译出来的所有 ipk 包，全复制到这个目录
           cp sdk/bin/packages/x86_64/*/*.ipk "$DEST_DIR/" || true
+          
+          # === 新增：生成 OpenWrt 在线源所需的索引文件 ===
+          echo "=== 生成 Packages 索引文件 ==="
+          cd "$DEST_DIR"
+          for f in *.ipk; do
+            if [ -f "$f" ]; then
+              echo "Package: ${f%%_*}"
+              echo "Version: $(echo $f | cut -d_ -f2)"
+              echo "Architecture: $(echo $f | cut -d_ -f3 | cut -d. -f1)"
+              echo "Filename: $f"
+              echo "Size: $(stat -c %s $f)"
+              echo "Description: Auto generated package $f"
+              echo ""
+            fi
+          done > Packages
+          
+          # 压缩成 gz 格式
+          gzip -c Packages > Packages.gz
 
       - name: Upload Artifact (for download)
         uses: actions/upload-artifact@v4
@@ -67,6 +85,6 @@ jobs:
       - name: Auto Commit to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-build: Update X86 IPKs"
+          commit_message: "Auto-build: Update X86 IPKs and Packages index"
           branch: master
           file_pattern: ipk/**/*
