@@ -35,13 +35,14 @@ jobs:
         run: |
           wget ${{ matrix.sdk_url }}
           tar -xf openwrt-sdk-*.tar.xz
-          mv openwrt-sdk-* sdk
+          # 加斜杠确保匹配的是文件夹，防止匹配到压缩包
+          mv openwrt-sdk-*/ sdk
           
       - name: Setup Feeds and Compile
         run: |
           cd sdk
           
-          # 1. 修复 Error opening terminal: unknown
+          # 修复终端报错
           export TERM=xterm
           
           cp feeds.conf.default feeds.conf
@@ -50,10 +51,10 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a -p mmdvm
           
-          # 2. 修复 menuconfig 报错，强制生成默认 .config
+          # 自动生成默认配置
           make defconfig
           
-          # 编译你需要的包（加了 || true 防止单个包不兼容导致整个任务失败）
+          # 编译包（|| true 保证就算某个报错也能继续下载其他成功的包）
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
 
@@ -61,5 +62,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MMDVM-${{ matrix.arch }}
-          # 抓取所有生成的 ipk
           path: sdk/bin/packages/${{ matrix.arch }}/mmdvm/*.ipk
