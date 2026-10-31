@@ -43,6 +43,7 @@ jobs:
           echo "=== 仅编译纯 DMR 核心包 ==="
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
+          make package/mmdvm-luci/compile V=s || true
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
