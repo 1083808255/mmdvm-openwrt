@@ -11,11 +11,9 @@ jobs:
     strategy:
       matrix:
         include:
-          # MT7628 架构
           - target: mt76x8
             arch: mipsel_24kc
             sdk_url: https://downloads.openwrt.org/releases/23.05.3/targets/ramips/mt76x8/openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          # X86 架构
           - target: x86
             arch: x86_64
             sdk_url: https://downloads.openwrt.org/releases/23.05.3/targets/x86/64/openwrt-sdk-23.05.3-x86-64_gcc-12.3.0_musl.Linux-x86_64.tar.xz
@@ -35,14 +33,11 @@ jobs:
         run: |
           wget ${{ matrix.sdk_url }}
           tar -xf openwrt-sdk-*.tar.xz
-          # 加斜杠确保匹配的是文件夹，防止匹配到压缩包
           mv openwrt-sdk-*/ sdk
           
       - name: Setup Feeds and Compile
         run: |
           cd sdk
-          
-          # 修复终端报错
           export TERM=xterm
           
           cp feeds.conf.default feeds.conf
@@ -51,12 +46,27 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a -p mmdvm
           
-          # 自动生成默认配置
           make defconfig
           
-          # 编译包（|| true 保证就算某个报错也能继续下载其他成功的包）
+          echo "=== 强制打包 dmr-gateway 源码包，方便打补丁 ==="
+          make package/dmr-gateway/download V=s
+          make package/dmr-gateway/prepare V=s
+          
+          echo "=== 强行给旧源码打上兼容 GCC12 的补丁 ==="
+          # 自动寻找源码目录
+          DMR_DIR=$(find build_dir -type d -name "DMRGateway-*" | head -n 1)
+          if [ -n "$DMR_DIR" ]; then
+            echo "找到源码目录: $DMR_DIR"
+            # 给所有 cpp 文件强制加上 cstring 和 cstdio 头文件
+            find "$DMR_DIR" -name "*.cpp" -exec sed -i '1i #include <cstring>\n#include <cstdio>' {} +
+          fi
+          
+          echo "=== 开始正式编译（去掉了 || true，必须成功） ==="
+          make package/dmr-gateway/compile V=s
           make package/mmdvm-host/compile V=s || true
-          make package/dmr-gateway/compile V=s || true
+          
+          echo "=== 检查是否成功生成 ipk ==="
+          ls -la bin/packages/${{ matrix.arch }}/mmdvm/ | grep dmr-gateway
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
