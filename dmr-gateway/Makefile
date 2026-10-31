@@ -35,6 +35,12 @@ endef
 define Package/dmrgateway/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/DMRGateway $(1)/usr/bin/
+
+	$(INSTALL_DIR) $(1)/etc
+	$(INSTALL_CONF) ./files/DMRGateway.ini $(1)/etc/DMRGateway.ini
+
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/dmr-gateway.init $(1)/etc/init.d/dmrgateway
 endef
 
 $(eval $(call BuildPackage,dmrgateway))
