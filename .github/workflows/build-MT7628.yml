@@ -1,4 +1,4 @@
-name: Build MMDVM (MT7628 DMR Only)
+name: Build MT7628 MMDVM (DMR Only)
 
 on:
   workflow_dispatch:
