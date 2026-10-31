@@ -15,12 +15,12 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget
+          sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip zlib1g-dev file python3 python3-setuptools wget zstd
 
       - name: Download OpenWrt SDK
         run: |
-          wget https://downloads.openwrt.org/releases/23.05.3/targets/ramips/mt76x8/openwrt-sdk-23.05.3-ramips-mt76x8_gcc-12.3.0_musl.Linux-x86_64.tar.xz
-          tar -xf openwrt-sdk-*.tar.xz
+          wget https://downloads.openwrt.org/releases/24.10.5/targets/ramips/mt76x8/openwrt-sdk-24.10.5-ramips-mt76x8_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+          tar --use-compress-program=unzstd -xf openwrt-sdk-*.tar.zst
           mv openwrt-sdk-*/ sdk
           
       - name: Setup Feeds and Compile (DMR Only)
@@ -40,35 +40,35 @@ jobs:
           make package/libs/libmosquitto/compile V=s || true
           make package/libs/libcurl/compile V=s || true
           
-          echo "=== 编译纯 DMR 核心包及 LuCI ==="
+          echo "=== 编译纯 DMR 核心包 ==="
           make package/mmdvm-host/compile V=s || true
           make package/dmr-gateway/compile V=s || true
-          make package/mmdvm-luci/compile V=s || true
 
       - name: Collect and Upload IPKs
         run: |
           DEST_DIR="ipk/ipk-mt7628/build"
+          
+          # 核心：先清空旧文件
+          rm -rf "$DEST_DIR"/*
           mkdir -p "$DEST_DIR"
           
-          # 复制所有生成的 ipk 包（包含依赖）
+          # 复制包
           cp sdk/bin/packages/mipsel_24kc/*/*.ipk "$DEST_DIR/" || true
           
-          # === 新增：生成 OpenWrt 在线源所需的索引文件 ===
-          echo "=== 生成 Packages 索引文件 ==="
+          echo "=== 生成带正确 Architecture 的 Packages 索引文件 ==="
           cd "$DEST_DIR"
+          echo "Architecture: mipsel_24kc" > Packages
           for f in *.ipk; do
             if [ -f "$f" ]; then
               echo "Package: ${f%%_*}"
               echo "Version: $(echo $f | cut -d_ -f2)"
-              echo "Architecture: $(echo $f | cut -d_ -f3 | cut -d. -f1)"
+              echo "Architecture: mipsel_24kc"
               echo "Filename: $f"
               echo "Size: $(stat -c %s $f)"
               echo "Description: Auto generated package $f"
               echo ""
             fi
-          done > Packages
-          
-          # 压缩成 gz 格式
+          done >> Packages
           gzip -c Packages > Packages.gz
 
       - name: Upload Artifact (for download)
@@ -80,6 +80,6 @@ jobs:
       - name: Auto Commit to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-build: Update MT7628 IPKs and Packages index"
+          commit_message: "Auto-build: Clean and Update MT7628 IPKs"
           branch: master
           file_pattern: ipk/**/*
