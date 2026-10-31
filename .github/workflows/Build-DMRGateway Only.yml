@@ -35,12 +35,7 @@ jobs:
           ./scripts/feeds install -a -p mmdvm
           make defconfig
           
-          echo "=== 强制预编译缺失的依赖库 ==="
-          make package/libs/nlohmannjson/compile V=s
-          make package/libs/libmosquitto/compile V=s
-          make package/libs/libcurl/compile V=s
-          
-          echo "=== 只编译 dmr-gateway (无 || true，报错必停) ==="
+          echo "=== 只编译 dmr-gateway (让系统自动处理依赖) ==="
           make package/dmr-gateway/compile V=s
 
       - name: Collect IPK
