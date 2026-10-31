@@ -48,7 +48,8 @@ jobs:
           make package/nxdn-clients/compile V=s || true
           make package/ircddb-gateway/compile V=s || true
           make package/dapnet-gateway/compile V=s || true
-
+          make package/mmdvm-luci/compile V=s || true
+          
       - name: Upload ipk
         uses: actions/upload-artifact@v4
         with:
